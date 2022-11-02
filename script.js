@@ -19,9 +19,8 @@ class Game {
         this.tanahs = []
         let lenOfTanah = 6;
 
-        this.mencit = DOM("div", {
-            attr: {class: "mancik"},
-            inner: DOM('img', {attr: {style: "object-fit: contain; width: 100%; position: absolute; bottom: 0; left: 0;",src : "./asset/tikus-removebg-preview.png"}})
+        this.mencit = DOM('img', {
+            attr: {class: "mancik", src : "./asset/tikus-removebg-preview.png"}
         })
     
         this.title = DOM("h1", {
@@ -41,7 +40,7 @@ class Game {
         }))
 
         while(lenOfTanah > 0) {
-            let el = DOM("div", {attr: {class: "tanah" }, inner: DOM('img', {attr: {style: "object-fit: contain; width: 100%; position: absolute; bottom: 0; left: 0;",src : "./asset/tanah-removebg-preview.png"}})});
+            let el = DOM("div", {attr: {class: "object" }, inner: DOM('img', {attr: {class: "tanah",style: "object-fit: contain; width: 100%; position: absolute; bottom: 0; left: 0;",src : "./asset/tanah-removebg-preview.png"}})});
 
             this.tanahs.push(el)
             this.container.append(el)
@@ -62,6 +61,11 @@ class Game {
 
         var selected = this.tanahs[Math.floor(Math.random()*this.tanahs.length)]
         selected.append(clone)
+
+        setTimeout(() => {
+            clone.remove();
+            this.addPoint();
+        }, 500)
 
         clone.addEventListener('click', E => {
             clone.remove();

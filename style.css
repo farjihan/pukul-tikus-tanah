@@ -19,11 +19,31 @@ h1 {
     border: black 1px solid;
 }
 
-.tanah {
+.object {
     width: calc(100%/3.75);
     position: relative;
+    z-index: 0;
+}
+.tanah {
+    z-index: 4;
 }
 
 
 .mancik {
+    object-fit: contain;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 125px;
+    transform: translateX(-50%);
+    transition-delay: 2s;
+    animation: mencit 2s forwards;
+}
+@keyframes mencit {
+    from {
+        bottom: 0;
+    }
+    to {
+        bottom: 25%;
+    }
 }
