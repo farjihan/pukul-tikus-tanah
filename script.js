@@ -23,10 +23,10 @@ class Game {
             attr: {class: "game-body"}
         })
         this.container = DOM("div", {
-            attr: {class: "container"}
+            attr: {class: "container", style: "min-height: 50vh"}
         })
 
-        this.point = DOM("span");
+        this.point = DOM("h3", {attr: {style: "font-weight: 800;text-align: center;"}, inner: "Point : 0"});
 
         document.head.append(DOM("style", {
             inner: "body {background-size: cover;background-attachment: fixed;background-position: center;}"
@@ -35,7 +35,7 @@ class Game {
 
 
         document.body.innerHTML = null
-        this.wrapper.append(this.title, this.point)
+        this.wrapper.append(this.title, this.point, this.container)
         document.body.append(this.wrapper)
 
     }
