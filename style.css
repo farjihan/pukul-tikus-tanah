@@ -20,26 +20,10 @@ h1 {
 }
 
 .tanah {
-    background-image: url("./tanah-removebg-preview.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    background-position: bottom center;
     width: calc(100%/3.75);
-    height: 125px;
-    margin: 3em auto;
     position: relative;
 }
-.mancik{
-    background-image: url("./tikus-removebg-preview.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    background-position: top center;
-    width: calc(100%);
-    height: 125px;
-    margin: 0em auto;
-    z-index: -1;
-    position: absolute;
-    top: -50px;
+
+
+.mancik {
 }
