@@ -1,5 +1,6 @@
-*{
+body {
     background-image: url(./asset/background.jpg);
+    z-index: 1;
 }
 h1 {
     font-size: 60px;
